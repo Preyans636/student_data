@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form_field{
+            margin: 100px auto;
+            height: 700px;
+            width: 80%;
+        }
+        ul{
+            margin-top: 90px;
+        }
+        ul li{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        label{
+            font-size: 20px;
+        }
+        input{
+            font-size: 20px;
+            height: 50px;
+            width: 200px;
+        }
+        textarea{
+            font-size: 20px;
+        }
+        button{
+            height: 40px;
+            width: 130px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="form_field">
+        <form method="post">
+            {% csrf_token %}
+            <ul>
+                <li>
+                    <label for="name">name:- </label>
+                    <input type="text" name="s_name" placeholder="enter name...">
+                </li>
+                <li>
+                    <label for="name">age:- </label>
+                    <input type="text" name="s_age" placeholder="enter age...">
+                </li>
+                <li>
+                    <label for="name">std:- </label>
+                    <input type="text" name="s_std" placeholder="enter standard...">
+                </li>
+                <li>
+                    <label for="name">ph:- </label>
+                    <input type="text" name="s_ph" placeholder="enter phone number...">
+                </li>
+                <li>
+                    <label for="name">address:- </label>
+                    <textarea type="text" name="s_address" placeholder="enter address..." cols="30" rows="5"></textarea>
+                </li>
+                <li>
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+
+        </form>
+    </div>
+</body>
+</html>
